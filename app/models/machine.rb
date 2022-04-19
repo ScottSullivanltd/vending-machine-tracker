@@ -8,4 +8,8 @@ class Machine < ApplicationRecord
   def average_snack_price
     snacks.average("price").round(2)
   end
+
+  def snack_type_count
+    snacks.ids.count
+  end
 end
